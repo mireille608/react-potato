@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react potato</title>
+</head>
+<body>
+    <div id='root'></div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+
+    function Cameroon(props){
+        return(
+            <div>
+                
+                <h1>Cameroon,{props.name}</h1>
+                <h2>{props.tagLine}</h2>
+                <img src={props.img}/>
+                </div>
+        )
+    }
+    let element = (
+        <div>
+            <Cameroon name="Douala" tagLine="recreative place" img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5x-0Jq0I_oaN33i8e1l0KeHJmU5LAXElz0g&usqp=CAU"/>
+            <Cameroon name="Yaounde" tagLine="business place" img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO6aiGAHDnK1wHoTpQAbTMJ4V9dCuojRadmQ&usqp=CAU"/>
+            <Cameroon name="limbe" tagLine="beach" img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFstEJNAbCZTLO_odz_sHUZpKC2U9bPz14qg&usqp=CAU"/>
+            
+            </div>
+    )
+    ReactDOM.render(
+        element,
+        document.getElementById('root')
+    )
+</script>
+</body>
+</html>
